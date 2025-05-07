@@ -22,7 +22,7 @@ trait Visitor
      * @param Model|null $visitable
      * @return mixed
      */
-    public function visit(?Model $visitable = NULL)
+    public function visit(?Model $visitable)
     {
         return app('shetabit-visitor')->setVisitor($this)->visit($visitable);
     }

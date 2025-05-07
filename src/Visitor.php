@@ -231,7 +231,7 @@ class Visitor implements UserAgentParser
      *
      * @param Model $model
      */
-    public function visit(Model $model = null)
+    public function visit(?Model $model)
     {
         foreach ($this->except as $path) {
             if ($this->request->is($path)) {
@@ -270,7 +270,7 @@ class Visitor implements UserAgentParser
      *
      * @return bool
      */
-    public function isOnline(?Model $visitor = null, $seconds = 180)
+    public function isOnline(?Model $visitor, $seconds = 180)
     {
         $time = now()->subSeconds($seconds);
 

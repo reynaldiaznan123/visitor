@@ -90,7 +90,7 @@ class Agent extends MobileDetect
      * @param string|null $acceptLanguage
      * @return array
      */
-    public function languages(string $acceptLanguage = null): array
+    public function languages(?string $acceptLanguage): array
     {
         if ($acceptLanguage === null) {
             $acceptLanguage = $this->getHttpHeader('HTTP_ACCEPT_LANGUAGE');
